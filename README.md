@@ -1,45 +1,151 @@
-# E-commerce User Activity Log Analysis using Hadoop Data Lake
+# E-commerce User Log Activity Analysis using Hadoop Data Lake
 
-## Description
-This project analyzes e-commerce user activity logs using a Hadoop-based data lake.  
-Modern e-commerce platforms generate large volumes of user interaction data such as clicks, searches, product views, and session durations. Traditional relational databases struggle to handle this scale and velocity of data. This project uses Hadoop and its ecosystem to store, process, and analyze user activity logs efficiently and extract meaningful insights.
+## 📌 Project Overview
 
-## Problem Statement
-E-commerce platforms generate massive user activity data every second. Traditional RDBMS systems are not suitable for handling high-volume, high-velocity, and semi-structured log data. A scalable and cost-effective solution is required to store and analyze this data.
+Modern e-commerce platforms generate a huge amount of user interaction data such as clicks, searches, product views, add-to-cart events, and session durations. Analyzing this data helps businesses understand user behavior, improve personalization, and make better business decisions.
 
-## Technologies Used
-- Hadoop HDFS  
-- YARN  
-- Apache Spark  
-- Apache Hive  
-- Python / PySpark  
-- Flask  
-- HTML, CSS, JavaScript  
+This project uses a **Hadoop-based Data Lake** to store and process large-scale e-commerce user log data efficiently.
 
-## Architecture
-User interactions from the e-commerce web application are captured as activity logs.  
-These logs are stored in HDFS as raw data.  
-Apache Spark processes and aggregates the data.  
-Hive is used to query the processed data using SQL-like syntax.  
-The final output is used for analytics and reporting.
+---
 
-## Key Features
-- Distributed storage using HDFS  
-- Scalable data processing  
-- Clickstream and session analysis  
-- SQL-based querying with Hive  
-- Analytical insights for decision-making  
+## 🎯 Problem Statement (Simple Terms)
 
-## Use Cases
-- User behavior analysis  
-- Personalization and recommendation systems  
-- Product performance analysis  
-- Marketing and traffic analysis  
-- Business intelligence reporting  
+Traditional databases struggle to handle:
 
-## Conclusion
-This project demonstrates how a Hadoop Data Lake can efficiently manage and analyze large-scale e-commerce user activity data. The solution provides scalability, fault tolerance, and flexibility, making it suitable for modern big data analytics applications.
+* Very large volumes of user activity data
+* Fast incoming data (high velocity)
+* Different data formats (schema variability)
 
-## Author
-Bharath Guru  
+The goal of this project is to:
+
+* Collect and store e-commerce user log data
+* Process and analyze it using Hadoop
+* Extract useful insights like user behavior and activity patterns
+
+---
+
+## 🧩 Where This Project Is Used
+
+* User behavior analysis
+* Product recommendation systems
+* Website performance analysis
+* Marketing and sales analytics
+* Business decision-making support
+
+---
+
+## 🛠️ Technologies Used
+
+* Hadoop (HDFS)
+* Hive
+* MapReduce (optional)
+* Linux
+* Java / Python (for data generation or processing)
+
+---
+
+## 📂 Project Structure
+
+```
+Ecommerce-User-Log-Analysis/
+│
+├── data/
+│   ├── raw_logs/
+│   └── processed_logs/
+│
+├── hive_queries/
+│   ├── create_tables.hql
+│   └── analysis_queries.hql
+│
+├── scripts/
+│   ├── data_ingestion.sh
+│   └── preprocessing.py
+│
+├── output/
+│   └── results/
+│
+└── README.md
+```
+
+---
+
+## ⚙️ How to Run the Project (Step-by-Step)
+
+### 1️⃣ Start Hadoop Services
+
+```bash
+start-dfs.sh
+start-yarn.sh
+```
+
+### 2️⃣ Create HDFS Directories
+
+```bash
+hdfs dfs -mkdir /ecommerce
+hdfs dfs -mkdir /ecommerce/raw_logs
+```
+
+### 3️⃣ Upload Log Files to HDFS
+
+```bash
+hdfs dfs -put data/raw_logs/* /ecommerce/raw_logs/
+```
+
+### 4️⃣ Create Hive Tables
+
+```bash
+hive -f hive_queries/create_tables.hql
+```
+
+### 5️⃣ Run Analysis Queries
+
+```bash
+hive -f hive_queries/analysis_queries.hql
+```
+
+### 6️⃣ View Results
+
+```bash
+hdfs dfs -ls /ecommerce/output/
+hdfs dfs -cat /ecommerce/output/part-00000
+```
+
+---
+
+## 📊 Sample Insights Generated
+
+* Most viewed products
+* Peak user activity time
+* Average session duration
+* User engagement patterns
+
+---
+
+## ✅ Advantages of Using Hadoop Data Lake
+
+* Handles large-scale data efficiently
+* Supports structured and unstructured data
+* Scalable and cost-effective
+* Suitable for real-time and batch processing
+
+---
+
+## 🚀 Future Enhancements
+
+* Integrate Spark for faster processing
+* Add real-time data ingestion using Kafka
+* Build dashboards using Power BI / Tableau
+* Apply machine learning for recommendations
+
+---
+
+## 👨‍💻 Author
+
+**Bharath Guru**
 Bachelor of Engineering – Computer Science
+
+---
+
+## 📄 License
+
+This project is for educational purposes only.

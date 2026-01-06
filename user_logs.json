@@ -1,0 +1,42 @@
+[
+    {
+        "action": "Login button clicked",
+        "timestamp": "2025-10-28T17:20:12.261346"
+    },
+    {
+        "action": "Login button clicked",
+        "timestamp": "2025-10-28T17:20:14.421354"
+    },
+    {
+        "action": "View All Offers clicked",
+        "timestamp": "2025-10-28T17:20:21.517433"
+    },
+    {
+        "action": "Category clicked: Grocery",
+        "timestamp": "2025-10-28T17:20:24.829658"
+    },
+    {
+        "action": "Category clicked: Home & Furniture",
+        "timestamp": "2025-10-28T17:20:26.051711"
+    },
+    {
+        "action": "Category clicked: Grocery",
+        "timestamp": "2025-10-31T16:42:06.564735"
+    },
+    {
+        "action": "Login button clicked",
+        "timestamp": "2025-10-31T16:42:10.605657"
+    },
+    {
+        "action": "Category clicked: Mobiles & Tablets",
+        "timestamp": "2025-10-31T16:42:15.037764"
+    },
+    {
+        "action": "Category clicked: Laptop",
+        "timestamp": "2025-10-31T16:42:16.776938"
+    },
+    {
+        "action": "View All Offers clicked",
+        "timestamp": "2025-10-31T16:42:19.087212"
+    }
+]
